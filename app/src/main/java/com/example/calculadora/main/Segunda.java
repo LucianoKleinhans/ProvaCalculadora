@@ -111,25 +111,25 @@ public class Segunda extends AppCompatActivity {
                 op = "+";
                 Numero2 = Num;
                 result = Float.parseFloat(Numero1) + Float.parseFloat(Numero2);
-                visao.setText(Numero1+"+"+Numero2+"="+result.toString());
+                visao.setText(Numero1+" + "+Numero2+" = "+result.toString());
                 break;
             case 2://menos
                 op = "-";
                 Numero2 = Num;
                 result = Float.parseFloat(Numero1) - Float.parseFloat(Numero2);
-                visao.setText(Numero1+"-"+Numero2+"="+result.toString());
+                visao.setText(Numero1+" - "+Numero2+" = "+result.toString());
                 break;
             case 3://divisao
                 op = "/";
                 Numero2 = Num;
                 result = Float.parseFloat(Numero1) / Float.parseFloat(Numero2);
-                visao.setText(Numero1+"/"+Numero2+"="+result.toString());
+                visao.setText(Numero1+" / "+Numero2+" = "+result.toString());
                 break;
             case 4://multiplicaçao
                 op = "*";
                 Numero2 = Num;
                 result = Float.parseFloat(Numero1) * Float.parseFloat(Numero2);
-                visao.setText(Numero1+"*"+Numero2+"="+result.toString());
+                visao.setText(Numero1+" * "+Numero2+" = "+result.toString());
                 break;
         }
         conta.setNum1(Float.parseFloat(Numero1));

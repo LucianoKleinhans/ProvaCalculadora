@@ -19,4 +19,5 @@
     <string name="a_c">A/C</string>
     <string name="_Mult">*</string>
     <string name="_Div">/</string>
+    <string name="_ponto">.</string>
 </resources>
