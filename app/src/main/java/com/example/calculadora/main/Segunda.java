@@ -18,6 +18,7 @@ import java.util.function.Function;
 public class Segunda extends AppCompatActivity {
     private TextView visao;
     Conta conta;
+    private String op;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -104,29 +105,36 @@ public class Segunda extends AppCompatActivity {
     }
 
     public void operadorIgual(View view) {
+        conta = new Conta();
         switch (caso) {
             case 1://mais
+                op = "+";
                 Numero2 = Num;
                 result = Float.parseFloat(Numero1) + Float.parseFloat(Numero2);
                 visao.setText(Numero1+"+"+Numero2+"="+result.toString());
                 break;
             case 2://menos
+                op = "-";
                 Numero2 = Num;
                 result = Float.parseFloat(Numero1) - Float.parseFloat(Numero2);
                 visao.setText(Numero1+"-"+Numero2+"="+result.toString());
                 break;
             case 3://divisao
+                op = "/";
                 Numero2 = Num;
                 result = Float.parseFloat(Numero1) / Float.parseFloat(Numero2);
                 visao.setText(Numero1+"/"+Numero2+"="+result.toString());
                 break;
             case 4://multiplicaçao
+                op = "*";
                 Numero2 = Num;
                 result = Float.parseFloat(Numero1) * Float.parseFloat(Numero2);
                 visao.setText(Numero1+"*"+Numero2+"="+result.toString());
                 break;
         }
-        conta = new Conta();
+        conta.setNum1(Float.parseFloat(Numero1));
+        conta.setOperador(op);
+        conta.setNum2(Float.parseFloat(Numero2));
         conta.setHistoricoConta(result.toString());
         Dados.salvar(conta);
     }

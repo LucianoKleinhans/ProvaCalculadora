@@ -5,11 +5,8 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -22,36 +19,15 @@ import com.example.calculadora.domain.Conta;
 
 public class Primeira extends AppCompatActivity {
 
-    //apagae abaixo se der merda
     private ListView lista;
     ArrayAdapter<String> adapter;
-    //
 
-    /*
-
-    //isso aqui ta certo nao apagar
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.primeira);
-    }
-
-    */
-
-    // - - - - -- - - -- - - -- - - -- //
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.primeira);
-        lista= findViewById(R.id.Historico);
+        lista = findViewById(R.id.historico);
         atualiza();
-
-        /*lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-        @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-            }
-        });
 
         lista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
@@ -61,7 +37,7 @@ public class Primeira extends AppCompatActivity {
                 atualiza();
                 return true;
             }
-        });*/
+        });
     }
 
     private void atualiza() {
@@ -71,8 +47,6 @@ public class Primeira extends AppCompatActivity {
         }else
             adapter.notifyDataSetChanged();
     }
-
-    // -  - -- - - - -- - - - -- - - //
 
     public void OpenCalculadora(View view) {
         Intent it = new Intent(this, Segunda.class);
