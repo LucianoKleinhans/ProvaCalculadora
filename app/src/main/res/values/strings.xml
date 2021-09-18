@@ -15,4 +15,8 @@
     <string name="_0">0</string>
     <string name="textview">TextView</string>
     <string name="calculadora">calculadora</string>
+    <string name="fechar_calculadora">fechar calculadora</string>
+    <string name="a_c">A/C</string>
+    <string name="_Mult">*</string>
+    <string name="_Div">/</string>
 </resources>
